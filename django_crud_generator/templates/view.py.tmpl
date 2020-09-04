@@ -15,7 +15,7 @@ from .. import (
 )
 
 
-class List(LoginRequiredMixin, base_views.BaseListView):
+class List(LoginRequiredMixin, base_views.BasePaginationListView):
     """
     List all ${model_name}s
     """
@@ -33,7 +33,7 @@ class List(LoginRequiredMixin, base_views.BaseListView):
             context['create_object_reversed_url'] = reverse_lazy(
                 conf.${model_prefix}_CREATE_URL_NAME
             )
-        
+
         return context
 
 
