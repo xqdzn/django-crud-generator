@@ -4,14 +4,20 @@
 [![PyPI](https://img.shields.io/pypi/v/django-crud-generator.svg)](https://pypi.org/project/django-crud-generator)
 
 
-This is a simple script to automate CRUD operations based on [Base Django](https://git.contraslash.com/ma0/base-django) 
+This is a simple script to automate CRUD operations based on [Base Django](https://git.contraslash.com/ma0/base-django)
 by [contraslash](https://contraslash.com)
- 
+
 ## Prerequisites:
 
 - You have an existing django project with an app with a model to generate its crud
 - You have a template called `base.html` and that template contains a block called `content`
 - You have installed [Base Django app](https://git.contraslash.com/ma0/base-django)  and is already on `INSTALLED_APPS` on `settings.py`
+
+## How to Install:
+Install dengan menggunakan perintah berikut:
+```bash
+python setup.py install
+```
 
 ## Usage:
 You should invoque this script using simethin like this
