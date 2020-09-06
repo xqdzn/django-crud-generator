@@ -2,7 +2,13 @@ from django.urls import path
 
 from . import conf
 
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.views.generic import TemplateView
+
+class HomeView(LoginRequiredMixin, TemplateView):
+    template_name = "index.html"
+
 urlpatterns = [
+    path('', HomeView.as_view()),
 
 ]
-
