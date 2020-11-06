@@ -40,7 +40,7 @@ First create your post model, in order to do so put this content on your `applic
 from django.db import models
 from django.contrib.auth import models as auth_models
 
-from base import models as base_models
+from apps.base import models as base_models
 
 from . import (
     conf
