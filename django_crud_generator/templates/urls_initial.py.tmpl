@@ -6,13 +6,4 @@ from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMix
 from django.views.generic import TemplateView
 from django.urls import include, path
 
-class HomeView(LoginRequiredMixin, TemplateView):
-    template_name = "index.html"
-
-urlpatterns = [
-    path('', HomeView.as_view(), name='index'),
-    path('', include('apps.unitron.urls_api.py')),
-
-
-]
-
+urlpatterns = []

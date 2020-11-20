@@ -74,7 +74,7 @@ class Detail(LoginRequiredMixin, base_views.BaseDetailView):
         context = super(Detail, self).get_context_data(**kwargs)
 
         context['list_object_reversed_url'] = reverse_lazy(conf.${model_prefix}_LIST_URL_NAME)
-        context['delete_url_name'] = conf.MAKANAN_DELETE_URL_NAME
+        context['delete_url_name'] = conf.${model_prefix}_DELETE_URL_NAME
 
         if self.request.user.has_perm("${application_name}.change_${model_name_lower}"):
             context['update_object_reversed_url'] = reverse_lazy(
