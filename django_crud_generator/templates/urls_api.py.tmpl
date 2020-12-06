@@ -1,9 +1,5 @@
 ${url_pattern}_router = DefaultRouter()
 
-${url_pattern}_router.register(
-    r'^api/${url_pattern}',
-    viewsets.${model_name},
-    base_name="${url_pattern}"
-)
+${url_pattern}_router.register('api/${url_pattern}', viewsets.${model_name})
 
-api_urlpatterns += ${url_pattern}_router.urls
+urlpatterns += ${url_pattern}_router.urls
